@@ -1,7 +1,25 @@
 //Exercise 2: Fizz Buzz
 
 const fizzBuzz = function (n) {
-  //Start coding here
+   const result = [];
+
+   for (let i = 1; i <= n; i++) {
+     let current = "";
+
+     if (i % 3 === 0) {
+       current += "Fizz";
+     }
+
+     if (i % 5 === 0) {
+       current += "Buzz";
+     }
+
+     //***Mynote --check string  true=>push current
+     result.push(current ? current : i.toString());
+   }
+   // for inspect
+   console.log(result);
+   return result;
 };
 
 const result1 = fizzBuzz(3);
